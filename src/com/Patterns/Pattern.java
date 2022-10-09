@@ -1,4 +1,4 @@
-package com.StringsandStringBuilder;
+package com.Patterns;
 
 import java.util.*;
 public class Pattern {

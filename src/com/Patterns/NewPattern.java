@@ -1,4 +1,4 @@
-package com.StringsandStringBuilder;
+package com.Patterns;
 
 import java.util.Map;
 import java.util.Scanner;
