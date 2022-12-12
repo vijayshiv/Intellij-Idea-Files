@@ -22,7 +22,7 @@ public class TwoSum {
         }
         System.out.print("Input the target element -> ");
         int t = in.nextInt();
-        int[] ans = twoSum(arr,t);
+        int[] ans = twoSumOptimized(arr,t);
         System.out.print("The elements that has the required sum is -> " + Arrays.toString(ans));
     }
     public static int[] twoSum(int[] nums, int target) {
@@ -33,5 +33,21 @@ public class TwoSum {
                     return new int[]{i ,j};
             }
         return new int[]{-1 , -1};
+    }
+    public static int[] twoSumOptimized(int nums[], int target){
+        int l = 0;
+        int r = nums.length - 1;
+
+        while(l < r){
+            if(nums[l] + nums[r] == target){
+                return new int[]{l ,r};
+            } else if (nums[l] + nums[r] > target) {
+                r--;
+            }
+            else {
+                l++;
+            }
+        }
+        return new int[]{-1,-1};
     }
 }
