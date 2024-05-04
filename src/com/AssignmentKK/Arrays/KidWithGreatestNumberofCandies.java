@@ -16,7 +16,7 @@ package com.AssignmentKK.Arrays;
     - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
     - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
  */
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 import java.util.Scanner;
 
