@@ -27,10 +27,27 @@ public class Leetcode33 {
         return -1;
     }
 
+    public static boolean rotateString(String s, String goal) {
+        String str = s + s;
+
+        int m = goal.length();
+        int n = str.length();
+
+        for (int i = 0; i < n - m; i++) {
+            for (int j = 0; j < m; j++) {
+                if (goal.charAt(i + j) != str.charAt(i))
+                    break;
+
+                if (j == m)
+                    return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         int[] arr = {5, 6, 7, 0, 1, 2, 3, 4};
         int t = 3;
-
         int ans = search(arr, t);
         System.out.println(ans);
     }
